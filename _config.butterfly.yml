@@ -276,9 +276,9 @@ livere:
 gitalk:
     client_id: 586a25a63456feb0fad1
     client_secret: 4d83224bc3842e154d42d88f6395972b631ab502
-    repo: tulaoda.github.io
+    repo: blog
     owner: tulaoda
-    admin: ['tulaoda']
+    admin: tulaoda
     language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru
     perPage: 10 # Pagination size, with maximum 100.
     distractionFreeMode: false # Facebook-like distraction free mode.

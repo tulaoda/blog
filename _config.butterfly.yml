@@ -5,25 +5,40 @@
 # sub-menu
 # name || icon:
 #   name || link || icon
-
 menu:
-    Home: / || fas fa-home
-    Archives: /archives/ || fas fa-archive
-    Tags: /tags/ || fas fa-tags
-    Categories: /categories/ || fas fa-folder-open
-    List||fas fa-list:
+    首页: / || fas fa-home
+    时间轴: /archives/ || fas fa-archive
+    标签: /tags/ || fas fa-tags
+    分类: /categories/ || fas fa-folder-open
+    媒体||fas fa-list:
+        - 番剧 || /bangumis/ || fab fa-youtube
+        - 电影 || /movies/ || fa fa-film
+        - 书单 || /books/ || fas fa-book
+        - 音乐 || /music/ || fa fa-music
+    清单||fas fa-list:
         - Music || /music/ || fas fa-music
         - Movie || /movies/ || fas fa-video
-    Link: /link/ || fas fa-link
-    About: /about/ || fas fa-heart
+    关于: /about/ || fas fa-heart
 
-# Hide the child menu items in mobile sidebar
-hide_sidebar_menu_child: false
+# 友链界面添加文字
+PS: PS：欢迎交换友链，以下是相关注意事项。
+require_headline: A Few Requirements
+requirement1: 本站不参与商业性网站、下载站、视频站等
+requirement2: HTTP和HTTPS均可，不强制性要求小绿锁，但是只有一个IP或者带端口的不接受哦
+requirement3: 网站要有维护，定期或不定期均可，线下朋友请忽略这一条
+requirement4: 申请友链在评论区留言即可，但需先添加本站友链（申请格式如下文所述）
+requirement5: 有一定数量的原创文章，建站一周以上（大佬可以无视以上要求）
+requirement6: 如果你想联系我，在About页面中有我的相关联系方式
+myInfo: My Blog Info
+info1: 'name: 超逸の技术博客'
+info2: 'link: https://yangchaoyi.vip/'
+info3: 'avatar: https://cdn.jsdelivr.net/gh/Chocolate1999/cdn/img/avatar.png'
+info4: 'descr: 不是只会写业务代码の前端攻城狮'
 
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: light #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: mac # default / darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -41,8 +56,8 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-    # fab fa-github: https://github.com/xxxxx || Github
-    # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
+    fab fa-github: https://github.com/tulaoda || Github
+    fas fa-envelope: mailto:coderaxin@163.com || Email
 
 # search (搜索)
 # --------------------------------------
@@ -53,9 +68,17 @@ algolia_search:
     hits:
         per_page: 6
 
+    labels:
+        input_placeholder: Search for Posts
+        hits_empty: "We didn't find any results for the search: ${query}" # if there are no result
+        hits_stats: '${hits} results found in ${time} ms'
+
 # Local search
 local_search:
     enable: false
+    labels:
+        input_placeholder: Search for Posts
+        hits_empty: "We didn't find any results for the search: ${query}" # if there are no result
 
 # Math (數學)
 # --------------------------------------
@@ -83,14 +106,14 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-    img:
-    effect: false
+    img: https://cdn.jsdelivr.net/gh/Chocolate1999/cdn/img/avatar.png
+    effect: false # 頭像會一直轉圈
 
 # The banner image of home page
-index_img:
+index_img: https://cdn.jsdelivr.net/gh/HCLonely/hclonely.github.io@1.3.9/img/Butterfly/index.webp
 
 # If the banner of page not setting, it will show the top_img
-default_top_img:
+default_top_img: https://cdn.jsdelivr.net/gh/HCLonely/hclonely.github.io@1.3.9/img/Butterfly/index.webp
 
 # The banner image of archive page
 archive_img:
@@ -123,7 +146,7 @@ cover:
     position: both
     # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
     default_cover:
-        # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
+        - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -132,23 +155,19 @@ error_img:
 
 # A simple 404 page
 error_404:
-    enable: false
+    enable: true
     subtitle: 'Page Not Found'
     background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
 
 post_meta:
     page: # Home Page
         date_type: created # created or updated or both 主頁文章日期是創建日或者更新日或都顯示
-        date_format: date # date/relative 顯示日期還是相對日期
         categories: true # true or false 主頁是否顯示分類
         tags: false # true or false 主頁是否顯示標籤
-        label: true # true or false 顯示描述性文字
     post:
         date_type: both # created or updated or both 文章頁日期是創建日或者更新日或都顯示
-        date_format: date # date/relative 顯示日期還是相對日期
         categories: true # true or false 文章頁是否顯示分類
         tags: true # true or false 文章頁是否顯示標籤
-        label: true # true or false 顯示描述性文字
 
 # wordcount (字數統計)
 wordcount:
@@ -159,9 +178,8 @@ wordcount:
 
 # Display the article introduction on homepage
 # 1: description
-# 2: both (if the description exists, it will show description, or show the auto_excerpt)
+# 2: both (if the description exists, it will show description. or show the auto_excerpt)
 # 3: auto_excerpt (default)
-# false: do not show the article introduction
 index_post_content:
     method: 3
     length: 500 # if you set method to 2 or 3, the length need to config
@@ -173,6 +191,7 @@ index_post_content:
 toc:
     enable: true
     number: true
+    auto_open: true # auto open the sidebar
 
 post_copyright:
     enable: true
@@ -184,12 +203,12 @@ post_copyright:
 reward:
     enable: false
     QR_code:
-        # - img: /img/wechat.jpg
-        #   link:
-        #   text: wechat
-        # - img: /img/alipay.jpg
-        #   link:
-        #   text: alipay
+        - img: /img/wechat.jpg
+          link:
+          text: wechat
+        - img: /img/alipay.jpg
+          link:
+          text: alipay
 
 # Related Articles
 related_post:
@@ -206,7 +225,7 @@ anchor: false
 
 # Displays outdated notice for a post (文章過期提醒)
 noticeOutdate:
-    enable: false
+    enable: true
     style: flat # style: simple/flat
     limit_day: 500 # When will it be shown
     position: top # position: top/bottom
@@ -232,7 +251,14 @@ sharejs:
 # https://www.addtoany.com/
 addtoany:
     enable: false
-    item: facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
+    item:
+        - facebook
+        - twitter
+        - wechat
+        - sina_weibo
+        - facebook_messenger
+        - email
+        - copy_link
 
 # Comments System
 # --------------------------------------
@@ -241,8 +267,8 @@ comments:
     # Up to two comments system, the first will be shown as default
     # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Utterances/Facebook Comments
     use:
-    # - Valine
-    # - Disqus
+        - Gitalk
+        # - Disqus
     text: true # Display the comment name next to the button
     # lazyload: The comment system will be load when comment element enters the browser's viewport.
     # If you set it to true, the comment count will be invalid
@@ -293,7 +319,7 @@ valine:
     pageSize: 10 # comment list page size
     avatar: monsterid # gravatar style https://valine.js.org/#/avatar
     lang: en # i18n: zh-CN/zh-TW/en/ja
-    placeholder: Please leave your footprints # valine comment input placeholder (like: Please leave your footprints)
+    placeholder: Please leave your footprints # valine comment input placeholder(like: Please leave your footprints )
     guest_info: nick,mail,link # valine comment header info (nick/mail/link)
     recordIP: false # Record reviewer IP
     serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
@@ -322,19 +348,15 @@ facebook_comments:
     order_by: social # social/time/reverse_time
     lang: en_US # Language en_US/zh_CN/zh_TW and so on
 
-# Twikoo
-# https://github.com/imaegoo/twikoo
-twikoo:
-
 # Chat Services
 # --------------------------------------
 
 # Chat Button [recommend]
 # It will create a button in the bottom right corner of website, and hide the origin button
-chat_btn: false
+chat_btn: true
 
 # The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down
-chat_hide_show: false
+chat_hide_show: true
 
 # chatra
 # https://chatra.io/
@@ -405,7 +427,6 @@ cnzz_analytics:
 # Google Adsense (谷歌廣告)
 google_adsense:
     enable: false
-    auto_ads: true
     js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
     client:
     enable_page_level_ads: true
@@ -462,7 +483,7 @@ yandex_site_verification:
 
 # The top_img settings of home page
 # default: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
-# The position of site info, eg: 300px/300em/300rem/10% (主頁標題距離頂部距離)
+# The positon of site info, eg: 300px/300em/300rem/10% (主頁標題距離頂部距離)
 index_site_info_top:
 # The height of top_img, eg: 300px/300em/300rem (主頁top_img高度)
 index_top_img_height:
@@ -476,7 +497,7 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:
+background: url(https://cdn.jsdelivr.net/gh/HCLonely/hclonely.github.io@1.3.9/img/Butterfly/index.webp)
 
 # Footer Background
 footer_bg: false
@@ -538,11 +559,10 @@ click_heart:
 ClickShowText:
     enable: false
     text:
-        # - I
-        # - LOVE
-        # - YOU
+        - I
+        - LOVE
+        - YOU
     fontSize: 15px
-    mobile: false
 
 # Default display mode (網站默認的顯示模式)
 # light (default) / dark
@@ -550,10 +570,10 @@ display_mode: light
 
 # Beautify (美化頁面顯示)
 beautify:
-    enable: false
+    enable: true
     field: post # site/post
-    title-prefix-icon: '\f0c1'
-    title-prefix-icon-color: '#F47466'
+    title-prefix-icon: '\f0e7'
+    title-prefix-icon-color: '#0078e7'
 
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
@@ -561,23 +581,23 @@ font:
     global-font-size:
     code-font-size:
     font-family:
-    code-font-family:
+    code-font:
 
 # Font settings for the site title and site subtitle
 # 左上角網站名字 主頁居中網站名字
 blog_title_font:
-    font_link:
-    font-family:
+    font_link: https://fonts.googleapis.com/css?family=Titillium+Web&display=swap
+    font-family: Titillium Web, 'PingFang SC', 'Hiragino Sans GB', Microsoft YaHei', sans-serif
 
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
     enable: true
-    icon: # the unicode value of Font Awesome icon, such as '\3423'
-    icon-top:
+    icon: '\f21c' #fontawesome上圖標的Unicode
+    icon-top: -20px
 
 # the subtitle on homepage (主頁subtitle)
 subtitle:
-    enable: false
+    enable: true
     # Typewriter Effect (打字效果)
     effect: true
     # loop (循環打字)
@@ -589,12 +609,14 @@ subtitle:
     # source: 3  調用一句網（簡體） http://yijuzhan.com/
     # source: 4  調用今日詩詞（簡體） https://www.jinrishici.com/
     # subtitle 會先顯示 source , 再顯示 sub 的內容
-    source: false
+    source: 4
     # 如果有英文逗號' , ',請使用轉義字元 &#44;
     # 如果有英文雙引號' " ',請使用轉義字元 &quot;
     # 開頭不允許轉義字元，如需要，請把整個句子用雙引號包住
     # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
     sub:
+        - 学如逆水行舟&#44;不进则退
+        - Learning is like rowing upstream, not to advance is to fall back
 
 # Loading Animation (加載動畫)
 preloader: false
@@ -604,24 +626,27 @@ preloader: false
 
 aside:
     enable: true
-    hide: false
-    button: true
     mobile: true # display on mobile
-    position: right # left or right
+    position: left # left or right
     card_author:
         enable: true
         description:
         button:
             icon: fab fa-github
             text: Follow Me
-            link: https://github.com/xxxxxx
+            link: https://github.com/tulaoda
     card_announcement:
         enable: true
-        content: This is my Blog
+        content: blog-lionkkv2.0.0魔改版本，已经足以使用，更多内容教程请访问主站:yangchaoyi.vip，谢谢~<img src="https://cdn.jsdelivr.net/gh/lete114/CDN/Use/my_bg.gif">
+    card_pixiv:
+        enable: true
+    card_calendar:
+        enable: true
+    card_map:
+        enable: true
     card_recent_post:
         enable: true
         limit: 5 # if set 0 will show all
-        sort: date # date or updated
     card_categories:
         enable: true
         limit: 8 # if set 0 will show all
@@ -629,7 +654,7 @@ aside:
     card_tags:
         enable: true
         limit: 40 # if set 0 will show all
-        color: false
+        color: true
     card_archives:
         enable: true
         type: monthly # yearly or monthly
@@ -672,13 +697,12 @@ newest_comments:
         enable: false
         forum:
         api_key:
-
 # Bottom right button (右下角按鈕)
 # --------------------------------------
 
 # Conversion between Traditional and Simplified Chinese (簡繁轉換)
 translate:
-    enable: false
+    enable: true
     # The text of a button
     default: 繁
     # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese）
@@ -710,7 +734,7 @@ darkmode:
 
 # medium-zoom
 # https://github.com/francoischalifour/medium-zoom
-medium_zoom: false
+medium_zoom: true
 
 # fancybox
 # http://fancyapps.com/fancybox/3/
@@ -769,17 +793,17 @@ aplayerInject:
 # position 彈窗位置
 # 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-    enable: false
+    enable: true
     position: bottom-left
     bg_light: '#49b1f5' # The background color of Toast Notification in light mode
     bg_dark: '#121212' # The background color of Toast Notification in dark mode
 
 # Baidu Push (百度推送)
-baidu_push: false
+baidu_push: true
 
 # https://instant.page/
 # prefetch (預加載)
-instantpage: false
+instantpage: true
 
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之間添加空格)
@@ -790,7 +814,7 @@ pangu:
 # Lazyload (圖片懶加載)
 # https://github.com/verlok/lazyload
 lazyload:
-    enable: false
+    enable: true
     post: /img/loading.gif
 
 # PWA
@@ -799,6 +823,7 @@ lazyload:
 # pwa:
 #   enable: false
 #   manifest: /image/pwa/manifest.json
+#   theme_color: "#fff"
 #   apple_touch_icon: /image/pwa/apple-touch-icon.png
 #   favicon_32_32: /image/pwa/32.png
 #   favicon_16_16: /image/pwa/16.png
@@ -820,8 +845,11 @@ fragment_cache: true
 inject:
     head:
         # - <link rel="stylesheet" href="/xxx.css">
+        - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@master/Hexo/css/flink.min.css">
     bottom:
         # - <script src="xxxx"></script>
+        - <script src="/js/calendar.js"></script>
+        - <script src="/js/languages.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -837,6 +865,7 @@ CDN:
     pjax: https://cdn.jsdelivr.net/npm/pjax/pjax.min.js
 
     # comments
+    blueimp_md5: https://cdn.jsdelivr.net/npm/blueimp-md5/js/md5.min.js
     gitalk: https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js
     gitalk_css: https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css
     valine: https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js
@@ -857,7 +886,7 @@ CDN:
     algolia_search_css: https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css
 
     # math
-    mathjax: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    mathjax: https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML
     katex: https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css
     katex_copytex: https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js
     katex_copytex_css: https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css
@@ -867,13 +896,13 @@ CDN:
     busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
 
     # background effect
-    canvas_ribbon: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js
-    canvas_fluttering_ribbon: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js
-    canvas_nest: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js
+    canvas_ribbon: /js/third-party/canvas-ribbon.js
+    canvas_ribbon_piao: /js/third-party/piao.js
+    canvas_nest: /js/third-party/canvas-nest.js
 
     lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js
     instantpage: https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js
-    typed: https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js
+    typed: https://cdn.jsdelivr.net/npm/typed.js
     pangu: https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js
 
     # photo
@@ -886,10 +915,11 @@ CDN:
     snackbar: https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js
 
     # effect
-    activate_power_mode: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js
-    fireworks: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js
-    click_heart: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js
-    ClickShowText: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js
+    anime: https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js
+    activate_power_mode: /js/third-party/activate-power-mode.js
+    fireworks: /js/third-party/fireworks.js
+    click_heart: /js/third-party/click_heart.js
+    ClickShowText: /js/third-party/ClickShowText.js
 
     # fontawesome
     fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
@@ -904,8 +934,7 @@ CDN:
     # aplayer
     aplayer_css: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
     aplayer_js: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
-    meting_js: https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js
-
+    meting_js: https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js
     # Prism.js
     prismjs_js: https://cdn.jsdelivr.net/npm/prismjs/prism.min.js
     prismjs_lineNumber_js: https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js

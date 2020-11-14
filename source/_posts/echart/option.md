@@ -1,6 +1,7 @@
 ---
-title: Hello World
-date: 2013/7/13 20:46:25
+title: echart 踩坑代码片段记录
+date: '2019/6/24 20:46:25'
+abbrlink: 5851
 ---
 
 # echart 踩坑代码片段记录

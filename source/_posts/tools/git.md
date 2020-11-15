@@ -2,7 +2,10 @@
 title: Git 学习
 abbrlink: 22554
 date: 2019-05-12 23:13:53
+keywords: git
+cover: http://cdn.tulaoda.top/git.jpeg
 tags:
+    - 工具
 ---
 
 # Git

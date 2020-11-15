@@ -106,7 +106,7 @@ favicon: https://cdn.tulaoda.top/cdn/images/favicon.ico
 
 # Avatar (頭像)
 avatar:
-    img: https://cdn.jsdelivr.net/gh/Chocolate1999/cdn/img/avatar.png
+    img: https://cdn.tulaoda.top/cdn/images/avatar.jpg
     effect: false # 頭像會一直轉圈
 
 # The banner image of home page

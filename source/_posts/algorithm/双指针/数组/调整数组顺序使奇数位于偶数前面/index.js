@@ -1,3 +1,6 @@
+---
+abbrlink: 23
+---
 function reOrderArray(array) {
     if (Array.isArray(array)) {
         let start = 0

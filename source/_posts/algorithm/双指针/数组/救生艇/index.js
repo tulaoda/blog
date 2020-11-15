@@ -1,3 +1,6 @@
+---
+abbrlink: 22
+---
 //https://leetcode-cn.com/problems/boats-to-save-people/
 const boatNumber = (people, limit) => {
     people.sort((a, b) => a - b)

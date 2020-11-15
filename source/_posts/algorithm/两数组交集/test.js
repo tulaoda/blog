@@ -1,3 +1,6 @@
+---
+abbrlink: 19
+---
 function makeMap(nums) {
     const map = new Map()
     for (let i = 0; i < nums.length; i++) {

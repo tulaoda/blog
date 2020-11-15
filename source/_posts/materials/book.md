@@ -1,3 +1,6 @@
+---
+abbrlink: 17
+---
 # 书籍推荐
 
 ## JavaScript系列

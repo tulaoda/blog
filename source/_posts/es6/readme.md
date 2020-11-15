@@ -1,3 +1,6 @@
+---
+abbrlink: 6
+---
 # ECMAScript6扩展
 
 ## 快速导航

@@ -1,3 +1,6 @@
+---
+abbrlink: 9
+---
 # JavaScript基础问题
 
 ## 快速导航

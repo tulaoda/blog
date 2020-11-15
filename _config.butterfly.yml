@@ -102,7 +102,7 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/favicon.png
+favicon: https://cdn.tulaoda.top/cdn/images/favicon.ico
 
 # Avatar (頭像)
 avatar:
@@ -110,10 +110,10 @@ avatar:
     effect: false # 頭像會一直轉圈
 
 # The banner image of home page
-index_img: https://cdn.jsdelivr.net/gh/HCLonely/hclonely.github.io@1.3.9/img/Butterfly/index.webp
+index_img: https://cdn.tulaoda.top/cdn/images/index.webp
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://cdn.jsdelivr.net/gh/HCLonely/hclonely.github.io@1.3.9/img/Butterfly/index.webp
+default_top_img: https://cdn.tulaoda.top/cdn/images/index.webp
 
 # The banner image of archive page
 archive_img:
@@ -146,8 +146,7 @@ cover:
     position: both
     # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
     default_cover:
-        - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
-
+        - https://api.dujin.org/bing/1366.php
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
     flink: /img/friend_404.gif

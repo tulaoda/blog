@@ -1,3 +1,6 @@
+---
+abbrlink: 8
+---
 # Symbol
 
 > ES6引入了一种新的数据类型Symbol，表示独一无二的值。

@@ -1,7 +1,7 @@
 ---
 title: Airbnb React/JSX 风格指南
 keywords: js编码规范
-cover: 'http://cdn.tulaoda.top/rule.jpeg'
+cover: https://cdn.tulaoda.top/cdn/images/rule.jpeg
 tags:
     - js
 abbrlink: 17842

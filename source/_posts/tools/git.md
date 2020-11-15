@@ -3,12 +3,14 @@ title: Git 学习
 abbrlink: 22554
 date: 2019-05-12 23:13:53
 keywords: git
-cover: http://cdn.tulaoda.top/git.jpeg
+cover: https://cdn.tulaoda.top/cdn/images/git.jpeg
 tags:
     - 工具
 ---
 
 # Git
+
+{% qnimg git.jpeg %}
 
 > Git 当下最流行的版本管理工具，结合自己工作中的实际应用做了以下梳理，如果您在使用中还有其它问题欢迎评论留言
 

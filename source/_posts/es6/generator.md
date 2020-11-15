@@ -1,3 +1,6 @@
+---
+abbrlink: 4
+---
 # Generator
 
 > Generator是一种异步编程的解决方案，异步编程早期使用回调之后Promise也可以解决这个问题，而Generator也是用来解决这个问个的，但是相对于Promise会更高级一点。Generator返回的就是一个Iterator接口。

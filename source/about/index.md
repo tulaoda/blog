@@ -17,8 +17,7 @@ type: 'about'
 -   当你在项目中不断获得了友谊和朋友时，说明你将取得项目的 **<font color=chocolate>成功</font>** 。
 
 ## 联系我
-
-{% qnimg WechatIMG28.jpeg %}
+{% qnimg WechatIMG28.jpeg extend:?imageView2/2/w/300%}
 
 一个不是只会写业务代码的前端攻城狮会带给你怎样的体会呢？
 

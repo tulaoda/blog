@@ -7,7 +7,8 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "preserver": "hexo qiniu sync"
+    "preserver": "npm run sync",
+    "sync": "hexo qiniu sync"
   },
   "hexo": {
     "version": "5.2.0"

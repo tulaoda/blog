@@ -1,7 +1,7 @@
 ---
 title: Airbnb JavaScript 风格指南
 keywords: js编码规范
-cover: http://cdn.tulaoda.top/rule.jpeg
+cover: https://cdn.tulaoda.top/cdn/images/rule.jpeg
 tags:
     - js
 abbrlink: 41261
@@ -1193,7 +1193,6 @@ const { a, ...noA } = copy // noA => { b: 2, c: 3 }
     ```javascript
     // bad
     ;(foo) => bar
-
     ;(foo) => bar
 
     // good

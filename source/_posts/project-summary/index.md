@@ -8,9 +8,9 @@ abbrlink: 1
 
 ## 模型管理平台
 
-#### 功能点
+<!-- #### 功能点
 
-![avatar](https://cdn.tulaoda.top/cdn/images/project/模型管理平台功能点.png)
+![avatar](https://cdn.tulaoda.top/cdn/images/project/模型管理平台功能点.png) -->
 
 #### 创建模型
 
